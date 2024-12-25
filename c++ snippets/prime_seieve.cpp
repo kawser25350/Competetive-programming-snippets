@@ -4,8 +4,10 @@
 
 using namespace std;
 
+vector<bool> prime; // Declare prime vector globally
+
 void primesieve(int n, vector<int>& pr) {
-    vector<bool> prime(n + 1, true);
+    prime.resize(n + 1, true);
 
     for (int p = 2; p * p <= n; p++) {
         if (prime[p]) {

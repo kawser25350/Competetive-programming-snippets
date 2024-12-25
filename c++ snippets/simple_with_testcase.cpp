@@ -1,7 +1,6 @@
-
 /*
  * Author: Kawser Ahmmed
- * File:   ${TM_FILENAME}
+ * File:   simple_with_out_testcase.cpp
  */
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
@@ -30,6 +29,7 @@ using namespace __gnu_pbds;
 #define endl '\n'
 #define fast_code  ios::sync_with_stdio(0);  cin.tie(NULL);
 
+
 // Debugger
 #define printarr(arr) for(int i = 0; i < sizeof(arr) / sizeof(arr[0]); i++) cout<<arr[i]<<" "; cout<<'\n';
 #define debug(x) cout<<#x<<" = "; _print(x); cout<<'\n';
@@ -40,6 +40,7 @@ void _print(double x){ cout << x; }
 void _print(string x){ cout << x; }
 void _print(char x){ cout << x; }
 void _print(bool x){ cout << (x ? "true" : "false"); }
+void _print(int32_t x){ cout<< x; }
 
 
 template<class T>void _print(vector<T> v){ cout << "[ "; for(T i : v){ _print(i); cout << " "; } cout << "]"; }
@@ -52,7 +53,6 @@ template<class T, class V>void _print(unordered_map<T,V> um){ cout << "[ "; for(
 //pbds
 template <typename T>using pbds = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
-
 void solve(int t)
 {
  
@@ -62,6 +62,12 @@ void solve(int t)
 int32_t main()
 {
     fast_code
+
+     #ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    #endif
+    
     int T;
     cin >> T;
  

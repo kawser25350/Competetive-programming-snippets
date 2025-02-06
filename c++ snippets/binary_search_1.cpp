@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 /*
  * Author: Kawser Ahmmed
@@ -66,3 +67,20 @@ int32_t main()
 
    cout<<idx<<ln;
 }
+=======
+int index = lower_bound(v.begin(), v.end()) - v.begin(); // return same value's or lower's index
+int index = upper_bound(v.begin(), v.end()) - v.begin(); // return upper value's index all time 
+
+int l = 0, r = 1e18, ans, mid;
+
+while (l <= r) {
+    mid = l + (r - l) / 2;
+
+    if (ok(mid)) {
+        r = mid - 1;
+        ans = mid;
+    } else {
+        l = mid + 1;
+    }
+}
+>>>>>>> 5ecea4b67825238b58935cafd45f05f7a057f5a2

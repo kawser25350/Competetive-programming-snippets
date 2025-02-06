@@ -73,6 +73,12 @@ void solve(int t)
 int32_t main()
 {
     fast_code
+    
+        #ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    #endif
+
     int T;
     cin >> T;
  

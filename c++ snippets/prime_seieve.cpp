@@ -1,18 +1,19 @@
-void primesieve(int n, vector<int>& pr) {
-    vector<bool> prime(n + 1, true);
-    memset(prime.data(), true, prime.size());
 
-    for (int p = 2; p * p <= n; p++) {
-        if (prime[p] == true) {
-            for (int i = p * p; i <= n; i += p) {
-                prime[i] = false;
+ void prime_sieve(vector<int>&sieve){
+
+    sieve[1]=0;
+    sieve[0]=0;
+
+    int n=sieve.size();
+
+    for(int i=2;i<n;i++){
+        if(sieve[i]){
+            for(int j=i*i;j<n;j+=i){
+                sieve[j]=0;
             }
         }
     }
+ // in main funciotn   -> int n=1e5;
+//                       vector<int>sieve(n,1);
 
-    for (int p = 2; p <= n; p++) {
-        if (prime[p]) {
-            pr.push_back(p);
-        }
-    }
-}
+ }
